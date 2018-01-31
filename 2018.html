@@ -1,0 +1,18 @@
+---
+layout: default
+title: 2018 Ed-Tech Mergers
+---
+
+<!-- Deadpool -->
+{% assign mergers = site.data.2018 %}
+{% assign mergers = mergers | sort:"Name1" %}
+
+<!-- Document -->
+
+{% for merger in mergers %}
+
+<ul>
+<li><strong>{{ merger.Name1 }}</strong> and <strong>{{ merger.Name2 }}</strong> (<a href="{{ merger.URL }}">News Link</a>)</li>
+</ul>
+
+{% endfor %}
